@@ -1,0 +1,1 @@
+export const selectListELements = listName => state => state.task[listName];
