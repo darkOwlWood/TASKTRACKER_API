@@ -28,7 +28,7 @@ const getToken = async () => {
 
 const performRequest = async ({ query, variables }, retry) => {
     try {
-        const resp = await client.request(query, variables, { withCredentials: false });
+        const resp = await client.request(query, variables, { withCredentials: WITH_CREDENTIALS });
         return resp;
     } catch (err) {
         const { status } = err.response;
