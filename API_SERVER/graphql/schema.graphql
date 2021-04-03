@@ -1,0 +1,36 @@
+type Query{
+    getUser: User!
+    getTaskById(taskId: ID): Task
+    getTaskListByUser: [Task]!
+}
+
+type Mutation{
+    addTask(task: TaskInput): Task
+    updateTask(taskId: ID, task: TaskInput): Task
+    deleteTask(taskId: ID): Int
+}
+
+type User{
+    _id: ID!
+    name: String!
+    lastName: String!
+    email: String!
+    taskList: [Task]!
+}
+
+type Task{
+    _id: ID
+    title: String
+    description: String
+    complete: Int
+    issueDate: String
+    dueDate: String
+}
+
+input TaskInput{
+    title: String!
+    description: String!
+    complete: Int!
+    issueDate: String!
+    dueDate: String!
+}
