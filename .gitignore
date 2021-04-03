@@ -143,7 +143,9 @@ storybook-static
 
 # rollup.js default build output
 dist/
+modules-manifest.json
 MAIN_SERVER/BACKEND/public/*
+!MAIN_SERVER/BACKEND/public/.gitkeep
 
 # Gatsby files
 .cache/
