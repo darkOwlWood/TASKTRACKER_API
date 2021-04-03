@@ -9,6 +9,7 @@ const config = {
     dbName:          process.env.DB_NAME,
     jwtExpireTimeMs: process.env.JWT_EXPIRE_TIME_MS,
     secretJwtAccess: process.env.SECRET_JWT_ACCESS,
+    mainServer:      process.env.MAIN_SERVER,
 }
 
 module.exports = {
