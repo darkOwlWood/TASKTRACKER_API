@@ -7,7 +7,8 @@ const config = {
     dbPassword:      process.env.DB_PASSWOR,
     dbName:          process.env.DB_NAME,
     dbHost:          process.env.DB_HOST,
-    secretJwtAccess: process.env.SECRET_JWT_ACCESS
+    secretJwtAccess: process.env.SECRET_JWT_ACCESS,
+    mainServer:      process.env.MAIN_SERVER,
 }
 
 module.exports = {
