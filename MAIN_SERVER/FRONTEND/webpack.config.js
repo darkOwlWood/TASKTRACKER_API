@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 
 const env = dotenv.config().parsed;
+const dev = env.DEV; 
 const envKeys = Object.keys(env).reduce((accumulator, key) => {
     accumulator[`process.env.${key}`] = JSON.stringify(env[key]);
     return accumulator;
@@ -63,6 +64,6 @@ module.exports = {
         })
     ],
     devServer: {
-        historyApiFallback: true,
+        historyApiFallback: dev.DEV==='development',
     }
 }

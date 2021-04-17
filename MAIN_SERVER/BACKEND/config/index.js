@@ -8,12 +8,12 @@ const config = {
     apiServer:    process.env.API_SERVER,
     cookieName:   process.env.COOKIE_NAME,
     cookieSecret: process.env.COOKIE_SECRET,
-    httpOnly:     process.env.DEV === 'development',
+    httpOnly:     !(process.env.DEV === 'development'),
     maxAge:       process.env.MAX_AGE,
     path:         process.env.COOKIE_PATH,
-    secure:       !process.env.DEV === 'development',
+    secure:       !(process.env.DEV === 'development'),
     signed:       Boolean(process.env.SIGNED),
-    sameSite:     Boolean(process.env.SAME_SITE),
+    sameSite:     process.env.SAME_SITE,
 }
 
 module.exports = {

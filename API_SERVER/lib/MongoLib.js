@@ -11,7 +11,7 @@ const MONGO_URI = config.dev ? `mongodb://${HOST}/${DB}` : `mongodb+srv://${USER
 class MongoLib {
     constructor() {
         this.db = DB;
-        this.client = new MongoClient(MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true });
+        this.client = new MongoClient(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     }
 
     connect() {
@@ -25,7 +25,7 @@ class MongoLib {
                     }
                     resolve(this.client.db(this.db));
                 })
-            })
+            });
         }
         return MongoLib.connection;
     }

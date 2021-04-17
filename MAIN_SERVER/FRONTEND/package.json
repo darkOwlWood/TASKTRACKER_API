@@ -6,7 +6,8 @@
   "scripts": {
     "dev:build-dll": "webpack --config webpack.config.dll.js --mode development",
     "dev:build-server": "webpack-dev-server --host 0.0.0.0 --mode development",
-    "dev:build-all": "webpack --config webpack.config.dll.js --mode development && webpack --mode development"
+    "dev:build-all": "webpack --config webpack.config.dll.js --mode development && webpack --mode development",
+    "prod:build-all": "webpack --config webpack.config.dll.js --mode production && webpack --mode production"
   },
   "keywords": [],
   "author": "",
